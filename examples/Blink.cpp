@@ -2,12 +2,13 @@
 #include <RGBLed.h>
 
 auto led = RGBLed(0, 1, 2);
-const static Color red = Color(255,10,100);
+
+Color colors[2] = { Color(255, 0, 128), Color(0, 0, 0) };
 
 void setup() {
     led.setup();
 }
 
 void loop() {
-    led.on(red);
+    led.blink(colors, 150);
 }
