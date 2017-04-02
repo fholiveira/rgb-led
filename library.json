@@ -1,0 +1,20 @@
+{
+  "name": "RGBLed",
+  "keywords": "rgb, led",
+  "description": "Arduino Library to control RGB leds",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/fholiveira/rgb-led"
+  },
+  "authors":
+  [
+    {
+      "name": "Fernando Oliveira",
+      "maintainer": true
+    }
+  ],
+  "version": "0.1.0",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
