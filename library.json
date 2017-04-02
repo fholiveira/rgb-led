@@ -1,5 +1,5 @@
 {
-  "name": "RGBLed",
+  "name": "rgb-led",
   "keywords": "rgb, led",
   "description": "Arduino Library to control RGB leds",
   "repository":
