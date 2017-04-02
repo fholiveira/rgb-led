@@ -7,6 +7,12 @@ Color::Color(uint8_t red, uint8_t green, uint8_t blue) :
 RGBLed::RGBLed(uint8_t redPin, uint8_t greenPin, uint8_t bluePin) :
     RED(redPin), GREEN(greenPin), BLUE(bluePin) { }
 
+void RGBLed::setup() {
+    pinMode(RED, OUTPUT);
+    pinMode(GREEN, OUTPUT);
+    pinMode(BLUE, OUTPUT);
+}
+
 void RGBLed::change(Color color) {
     analogWrite(RED, color.red);
     analogWrite(GREEN, color.green);

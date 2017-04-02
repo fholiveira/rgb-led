@@ -19,6 +19,7 @@
 	    void blink(Color colors[], int interval, int times);
 	    void blink(Color colors[], int interval);
 	    void on(Color color);
+	    void setup();
 	    void off();
 
     	private:
