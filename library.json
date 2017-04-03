@@ -1,5 +1,6 @@
 {
   "name": "rgb-led",
+  "version": "0.1.1",
   "keywords": "rgb, led",
   "description": "Arduino Library to control RGB leds",
   "repository":
@@ -14,7 +15,12 @@
       "maintainer": true
     }
   ],
-  "version": "0.1.0",
+  "export": {
+    "include": [
+      "lib/RGBLed/*",
+      "pltformio.ini",
+    ]
+  },
   "frameworks": "arduino",
   "platforms": "*"
 }
