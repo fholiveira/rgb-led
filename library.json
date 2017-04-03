@@ -18,7 +18,7 @@
   "export": {
     "include": [
       "lib/RGBLed/*",
-      "pltformio.ini",
+      "library.json",
     ]
   },
   "frameworks": "arduino",
