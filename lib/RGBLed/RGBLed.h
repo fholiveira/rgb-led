@@ -11,10 +11,15 @@
 	Color(uint8_t red, uint8_t green, uint8_t blue);
     };
 
+    enum Type {
+	CATHODE,
+	ANODE
+    };
+
     class RGBLed
     {
     	public:
-            RGBLed(uint8_t redPin, uint8_t greenPin, uint8_t bluePin);
+            RGBLed(Type type, uint8_t redPin, uint8_t greenPin, uint8_t bluePin);
 
 	    void blink(Color colors[], int interval, int times);
 	    void blink(Color colors[], int interval);
@@ -26,6 +31,7 @@
             const uint8_t RED;
             const uint8_t GREEN;
             const uint8_t BLUE;
+            const uint8_t OFFSET;
 
 	    void change(Color color);
     };

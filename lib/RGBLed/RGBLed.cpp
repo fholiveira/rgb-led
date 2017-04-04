@@ -4,8 +4,8 @@
 Color::Color(uint8_t red, uint8_t green, uint8_t blue) :
     red(red), green(green), blue(blue) { }
 
-RGBLed::RGBLed(uint8_t redPin, uint8_t greenPin, uint8_t bluePin) :
-    RED(redPin), GREEN(greenPin), BLUE(bluePin) { }
+RGBLed::RGBLed(Type type, uint8_t redPin, uint8_t greenPin, uint8_t bluePin) :
+    RED(redPin), GREEN(greenPin), BLUE(bluePin), OFFSET(type == ANODE ? 255 : 0) { }
 
 void RGBLed::setup() {
     pinMode(RED, OUTPUT);
@@ -14,9 +14,9 @@ void RGBLed::setup() {
 }
 
 void RGBLed::change(Color color) {
-    analogWrite(RED, color.red);
-    analogWrite(GREEN, color.green);
-    analogWrite(BLUE, color.blue);
+    analogWrite(RED, abs(color.red - OFFSET));
+    analogWrite(GREEN, abs(color.green - OFFSET));
+    analogWrite(BLUE, abs(color.blue - OFFSET));
 }
 
 void RGBLed::on(Color color) {
