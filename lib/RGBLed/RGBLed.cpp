@@ -28,7 +28,7 @@ void RGBLed::off() {
 }
 
 void RGBLed::blink(Color colors[], int interval) {
-    int length = sizeof(colors) / sizeof(colors[0]);
+    int length = sizeof(colors);
     for (int i = 0; i < length; i++) {
         change(colors[i]);
 	delay(interval);

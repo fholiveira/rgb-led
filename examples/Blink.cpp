@@ -1,14 +1,14 @@
 #include <Arduino.h>
 #include <RGBLed.h>
 
-auto led = RGBLed(0, 1, 2);
+auto led = RGBLed(9, 10, 11);
 
-Color colors[2] = { Color(255, 0, 128), Color(0, 0, 0) };
+Color colors[2] = { Color(255, 255, 0), Color(255, 255, 255) };
 
 void setup() {
     led.setup();
 }
 
 void loop() {
-    led.blink(colors, 150);
+    led.blink(colors, 500);
 }
