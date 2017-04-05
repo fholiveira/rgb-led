@@ -16,15 +16,14 @@
 	ANODE
     };
 
-    class RGBLed
-    {
+    class RGBLed {
     	public:
             RGBLed(Type type, uint8_t redPin, uint8_t greenPin, uint8_t bluePin);
 
 	    void blink(Color colors[], int interval, int times);
 	    void blink(Color colors[], int interval);
 	    void on(Color color);
-	    void setup();
+	    void setup() const;
 	    void off();
 
     	private:
@@ -33,7 +32,7 @@
             const uint8_t BLUE;
             const uint8_t OFFSET;
 
-	    void change(Color color);
+	    void change(Color color) const;
     };
 
 #endif
