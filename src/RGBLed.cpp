@@ -23,7 +23,19 @@ void RGBLed::off() {
     on(Color(0,0,0));
 }
 
-void RGBLed::blink(Color colors[], int interval) {
+void RGBLed::blink(Color color, int interval) {
+    on(color);
+    delay(interval);
+    off();
+    delay(interval);
+}
+
+void RGBLed::blink(Color color, int interval, int times) {
+    for (int i = 0; i < times; i++)
+	blink(color, interval);
+}
+
+void RGBLed::alternate(Color colors[], int interval) {
     int length = sizeof(colors);
     for (int i = 0; i < length; i++) {
         on(colors[i]);
@@ -31,7 +43,7 @@ void RGBLed::blink(Color colors[], int interval) {
     }
 }
 
-void RGBLed::blink(Color colors[], int interval, int times) {
+void RGBLed::alternate(Color colors[], int interval, int times) {
     for (int i = 0; i < times; i++)
-	blink(colors, interval);
+	alternate(colors, interval);
 }

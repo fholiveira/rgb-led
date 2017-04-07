@@ -20,8 +20,10 @@
     	public:
             RGBLed(Type type, uint8_t redPin, uint8_t greenPin, uint8_t bluePin);
 
-	    void blink(Color colors[], int interval, int times);
-	    void blink(Color colors[], int interval);
+	    void alternate(Color colors[], int interval, int times);
+	    void alternate(Color colors[], int interval);
+	    void blink(Color color, int interval, int times);
+	    void blink(Color color, int interval);
 	    void on(Color color) const;
 	    void setup() const;
 	    void off();
