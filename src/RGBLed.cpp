@@ -13,24 +13,20 @@ void RGBLed::setup() const {
     pinMode(BLUE, OUTPUT);
 }
 
-void RGBLed::change(Color color) const {
+void RGBLed::on(Color color) const {
     analogWrite(RED, abs(color.red - OFFSET));
     analogWrite(GREEN, abs(color.green - OFFSET));
     analogWrite(BLUE, abs(color.blue - OFFSET));
 }
 
-void RGBLed::on(Color color) {
-    change(color);
-}
-
 void RGBLed::off() {
-    change(Color(0,0,0));
+    on(Color(0,0,0));
 }
 
 void RGBLed::blink(Color colors[], int interval) {
     int length = sizeof(colors);
     for (int i = 0; i < length; i++) {
-        change(colors[i]);
+        on(colors[i]);
 	delay(interval);
     }
 }

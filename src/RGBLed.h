@@ -22,7 +22,7 @@
 
 	    void blink(Color colors[], int interval, int times);
 	    void blink(Color colors[], int interval);
-	    void on(Color color);
+	    void on(Color color) const;
 	    void setup() const;
 	    void off();
 
@@ -31,8 +31,6 @@
             const uint8_t GREEN;
             const uint8_t BLUE;
             const uint8_t OFFSET;
-
-	    void change(Color color) const;
     };
 
 #endif
