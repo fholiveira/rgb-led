@@ -1,6 +1,6 @@
 {
   "name": "rgb-led",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "keywords": "rgb, led",
   "description": "Arduino Library to control RGB leds",
   "repository":
